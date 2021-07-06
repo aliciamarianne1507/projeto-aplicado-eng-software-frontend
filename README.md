@@ -35,4 +35,4 @@ Todas as tabelas devem ser mantidas por meio de CRUDs(consulta, alteração, con
 ### BackEnd
 
 - A API da aplicação foi criada utilizando NodeJs 
-- Banco de Dados - Firebase 
+- Banco de Dados - Postgres
