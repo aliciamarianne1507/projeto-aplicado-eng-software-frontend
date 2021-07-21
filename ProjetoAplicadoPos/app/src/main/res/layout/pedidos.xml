@@ -16,6 +16,7 @@
         app:title="PEDIDOS" />
 
     <TextView
+        android:id="@+id/pesquisar_pedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -33,6 +34,7 @@
         />
 
     <TextView
+        android:id="@+id/pedido_01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -40,6 +42,7 @@
         android:background="@color/gray"
         />
     <TextView
+        android:id="@+id/pedido_02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -47,6 +50,7 @@
         android:background="@color/gray"
         />
     <TextView
+        android:id="@+id/pedido_03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -54,6 +58,7 @@
         android:background="@color/gray"
         />
     <TextView
+        android:id="@+id/pedido_04"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"

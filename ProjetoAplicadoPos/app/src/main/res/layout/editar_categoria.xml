@@ -18,6 +18,7 @@
 
 
     <EditText
+        android:id="@+id/codigo_categoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Código da Categoria*"
@@ -32,6 +33,7 @@
         android:inputType="textEmailAddress"
         />
     <EditText
+        android:id="@+id/nome_categoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome da Categoria*"
@@ -47,6 +49,7 @@
         />
 
     <Button
+        android:id="@+id/botao_salvar_categoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SALVAR CATEGORIA"
@@ -54,6 +57,7 @@
         android:backgroundTint="@color/black"
         />
     <Button
+        android:id="@+id/botao_excluir_categoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="EXCLUIR CATEGORIA"
@@ -64,6 +68,7 @@
         />
 
     <TextView
+        android:id="@+id/categoria_editada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Categoria editada com sucesso"

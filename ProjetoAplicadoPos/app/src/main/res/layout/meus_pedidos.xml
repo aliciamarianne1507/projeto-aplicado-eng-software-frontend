@@ -17,7 +17,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botao_cancelar_pedido_01"
         android:layout_width="137dp"
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
@@ -34,6 +34,7 @@
         android:textSize="9dp" />
 
     <Button
+        android:id="@+id/botao_ver_pedido_01"
         android:layout_width="119dp"
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
@@ -50,6 +51,7 @@
         android:textSize="9dp" />
 
     <TextView
+        android:id="@+id/pedido_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -65,7 +67,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botao_cancelar_pedido_02"
         android:layout_width="137dp"
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
@@ -82,6 +84,7 @@
         android:textSize="9dp" />
 
     <TextView
+        android:id="@+id/pedido_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -97,6 +100,7 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/botao_ver_pedido_02"
         android:layout_width="119dp"
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"

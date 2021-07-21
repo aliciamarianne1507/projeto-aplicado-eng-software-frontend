@@ -18,6 +18,7 @@
 
 
     <EditText
+        android:id="@+id/login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="E-mail*"
@@ -32,6 +33,7 @@
         android:inputType="textEmailAddress"
         />
     <EditText
+        android:id="@+id/login_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Senha*"
@@ -47,6 +49,7 @@
         />
 
     <Button
+        android:id="@+id/login_botao_entrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENTRAR"
@@ -55,6 +58,7 @@
         />
 
     <TextView
+        android:id="@+id/login_recuperar_senha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Recuperar a Senha"
@@ -65,6 +69,7 @@
         />
 
     <TextView
+        android:id="@+id/login_texto_ou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ou"
@@ -74,6 +79,7 @@
         android:layout_gravity="center"
         />
     <TextView
+        android:id="@+id/login_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Faça seu cadastro"

@@ -16,6 +16,7 @@
         app:title="ADMIN" />
 
     <Button
+        android:id="@+id/contas_clientes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Contas dos clientes"
@@ -23,6 +24,7 @@
         android:backgroundTint="@color/black"
         />
     <Button
+        android:id="@+id/categorias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Categorias"
@@ -30,6 +32,7 @@
         android:backgroundTint="@color/black"
         />
     <Button
+        android:id="@+id/gerar_relatórios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Gerar Relatórios"
@@ -38,6 +41,7 @@
         />
 
     <Button
+        android:id="@+id/botao_sair_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SAIR"
