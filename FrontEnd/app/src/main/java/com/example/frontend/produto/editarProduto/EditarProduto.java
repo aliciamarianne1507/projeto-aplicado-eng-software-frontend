@@ -58,10 +58,10 @@ public class EditarProduto extends AppCompatActivity {
 
     }
     private void search(){
-        editarProduto.setOnClickListener(v -> buscarCategory());
+        editarProduto.setOnClickListener(v -> editProduct());
 
     }
-    private void buscarCategory(){
+    private void editProduct(){
         JSONObject postData = new JSONObject();
         try{
             postData.put("codigo_produto", codProduto.getText());

@@ -1,4 +1,4 @@
-package com.example.frontend.categoria;
+package com.example.frontend;
 
 public class Excluir {
 

@@ -15,7 +15,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.frontend.R;
 import com.example.frontend.U;
-import com.example.frontend.categoria.Excluir;
+import com.example.frontend.Excluir;
 
 import org.json.JSONException;
 import org.json.JSONObject;

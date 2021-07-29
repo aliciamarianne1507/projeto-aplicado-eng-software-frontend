@@ -1,4 +1,4 @@
-package com.example.frontend.produto.excluirProduto;
+package com.example.frontend.pedidos.excluirPedido;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -14,43 +14,42 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.frontend.Excluir;
 import com.example.frontend.R;
 import com.example.frontend.U;
-import com.example.frontend.Excluir;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ExcluirProduto extends AppCompatActivity {
+public class ExcluirPedido extends AppCompatActivity {
     private RequestQueue queue;
-    private Button excluirProduto;
-    private EditText codProduto;
+    private Button excluirPedido;
+    private EditText codPedido;
     private TextView statusExclusao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_excluir_produto);
+        setContentView(R.layout.activity_excluir_pedido);
         components();
         delete();
     }
 
-    @SuppressLint("WrongViewCast")
     private void components(){
         queue = Volley.newRequestQueue(this);
-        excluirProduto = findViewById(R.id.delete_button_product);
-        codProduto = findViewById(R.id.cod_produto);
+        excluirPedido = findViewById(R.id.delete_button_pedido);
+        codPedido = findViewById(R.id.cod_pedido);
         statusExclusao = findViewById(R.id.title_status_exclusao);
 
 
     }
     private void delete(){
-        excluirProduto.setOnClickListener(v -> deleteProduct());
+        excluirPedido.setOnClickListener(v -> deletePedido());
 
     }
-    private void deleteProduct(){
+    private void deletePedido(){
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.DELETE,
-                U.BASE_URL + "/produto/" + codProduto.getText(),
+                U.BASE_URL + "/pedidos/" + codPedido.getText(),
                 null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -82,4 +81,3 @@ public class ExcluirProduto extends AppCompatActivity {
         statusExclusao.setText(excluir.getMessage());
     }
 }
-

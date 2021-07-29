@@ -1,4 +1,4 @@
-package com.example.frontend.produto.excluirProduto;
+package com.example.frontend.itempedidos.excluirItemPedido;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -14,22 +14,22 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.frontend.Excluir;
 import com.example.frontend.R;
 import com.example.frontend.U;
-import com.example.frontend.Excluir;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ExcluirProduto extends AppCompatActivity {
+public class ExcluirItemPedido extends AppCompatActivity {
     private RequestQueue queue;
-    private Button excluirProduto;
-    private EditText codProduto;
+    private Button excluirItemPedido;
+    private EditText codItemPedido;
     private TextView statusExclusao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_excluir_produto);
+        setContentView(R.layout.activity_excluir_itempedido);
         components();
         delete();
     }
@@ -37,20 +37,20 @@ public class ExcluirProduto extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
     private void components(){
         queue = Volley.newRequestQueue(this);
-        excluirProduto = findViewById(R.id.delete_button_product);
-        codProduto = findViewById(R.id.cod_produto);
+        excluirItemPedido = findViewById(R.id.delete_button_itempedido);
+        codItemPedido = findViewById(R.id.cod_itempedido);
         statusExclusao = findViewById(R.id.title_status_exclusao);
 
 
     }
     private void delete(){
-        excluirProduto.setOnClickListener(v -> deleteProduct());
+        excluirItemPedido.setOnClickListener(v -> deleteItemPedido());
 
     }
-    private void deleteProduct(){
+    private void deleteItemPedido(){
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.DELETE,
-                U.BASE_URL + "/produto/" + codProduto.getText(),
+                U.BASE_URL + "/itempedido/" + codItemPedido.getText(),
                 null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -65,7 +65,7 @@ public class ExcluirProduto extends AppCompatActivity {
                         } catch (JSONException e) {
                             System.out.println(response);
                             e.printStackTrace();
-                            statusExclusao.setText("Produto não excluido");
+                            statusExclusao.setText("Item Pedido não excluido");
                         }
                     }
                 },
@@ -82,4 +82,3 @@ public class ExcluirProduto extends AppCompatActivity {
         statusExclusao.setText(excluir.getMessage());
     }
 }
-

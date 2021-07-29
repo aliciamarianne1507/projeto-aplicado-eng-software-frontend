@@ -55,10 +55,10 @@ public class CriarProduto extends AppCompatActivity {
 
     }
     private void search(){
-        criarProduto.setOnClickListener(v -> buscarCategory());
+        criarProduto.setOnClickListener(v -> createProduct());
 
     }
-    private void buscarCategory(){
+    private void createProduct(){
         JSONObject postData = new JSONObject();
         try{
             postData.put("name_produto", nomeNovoProduto.getText());

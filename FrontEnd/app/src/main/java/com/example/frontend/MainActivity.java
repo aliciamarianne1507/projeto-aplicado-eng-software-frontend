@@ -7,12 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.example.frontend.categoria.Excluir;
-import com.example.frontend.categoria.excluirCategoria.ExcluirCategoria;
-import com.example.frontend.login.Login;
-import com.example.frontend.produto.buscarProduto.BuscarProduto;
-import com.example.frontend.produto.criarProduto.CriarProduto;
-import com.example.frontend.produto.editarProduto.EditarProduto;
+import com.example.frontend.cliente.excluirCliente.ExcluirCliente;
+import com.example.frontend.itempedidos.excluirItemPedido.ExcluirItemPedido;
+import com.example.frontend.pedidos.excluirPedido.ExcluirPedido;
 import com.example.frontend.produto.excluirProduto.ExcluirProduto;
 
 
@@ -26,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Button accessButton = findViewById(R.id.access_button);
 
         accessButton.setOnClickListener(v -> {
-            Intent it = new Intent(MainActivity.this, ExcluirProduto.class);
+            Intent it = new Intent(MainActivity.this, ExcluirItemPedido.class);
             startActivity(it);
         });
     }

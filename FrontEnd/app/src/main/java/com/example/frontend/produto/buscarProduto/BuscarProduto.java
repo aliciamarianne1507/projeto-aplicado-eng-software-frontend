@@ -55,10 +55,10 @@ public class BuscarProduto extends AppCompatActivity {
 
     }
     private void search(){
-        buscarProduto.setOnClickListener(v -> buscarCategory());
+        buscarProduto.setOnClickListener(v ->  buscarProduct());
 
     }
-    private void buscarCategory(){
+    private void buscarProduct(){
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,
                 U.BASE_URL + "/produto/" + codProduto.getText(),
