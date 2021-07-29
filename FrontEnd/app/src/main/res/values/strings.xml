@@ -18,4 +18,13 @@
     <string name="buscar_produto">Buscar um produto:</string>
     <string name="codigo_produto">Digite o código do produto:</string>
     <string name="buscar_produto_button">Buscar produto</string>
+    <string name="codigoprodutotitle">Código do produto:</string>
+    <string name="nomeprodutotitle">Nome do produto</string>
+    <string name="precoprodutotitle">Preço do Produto</string>
+    <string name="quantidadeprodutostitle">Quantidade de produtos:</string>
+    <string name="criar_novo_produto">Criar novo produto:</string>
+    <string name="novo_produto">Nome do novo produto</string>
+    <string name="preco_novo_produto">Preço</string>
+    <string name="criar_produto_button">Criar Produto</string>
+    <string name="editar_produto">Editar Produto:</string>
 </resources>

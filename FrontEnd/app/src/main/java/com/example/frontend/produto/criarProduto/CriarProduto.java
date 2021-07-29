@@ -1,4 +1,4 @@
-package com.example.frontend.produto.buscarProduto;
+package com.example.frontend.produto.criarProduto;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -16,16 +16,15 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.frontend.R;
 import com.example.frontend.U;
-import com.example.frontend.categoria.Categoria;
 import com.example.frontend.produto.Produto;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class BuscarProduto extends AppCompatActivity {
+public class CriarProduto extends AppCompatActivity {
     private RequestQueue queue;
-    private Button buscarProduto;
-    private EditText codProduto;
+    private Button criarProduto;
+    private EditText nomeNovoProduto,quantidadeNovoProduto,precoNovoProduto;
     private TextView titleNomeProduto, titleCodigoProduto;
     private TextView titleQuantidadeProduto, titlePrecoProduto;
     private TextView quantidadeProduto, precoProduto;
@@ -33,16 +32,16 @@ public class BuscarProduto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buscar_produto);
+        setContentView(R.layout.activity_criar_produto);
         components();
         search();
     }
 
-    @SuppressLint("WrongViewCast")
     private void components(){
         queue = Volley.newRequestQueue(this);
-        buscarProduto = findViewById(R.id.search_product);
-        codProduto = findViewById(R.id.cod_produto);
+        nomeNovoProduto = findViewById(R.id.novo_produto_nome);
+        quantidadeNovoProduto = findViewById(R.id.novo_produto_quantidade);
+        precoNovoProduto = findViewById(R.id.novo_produto_preco);
         codigoProduto = findViewById(R.id.codigo_produto);
         nomeProduto = findViewById(R.id.nome_produto);
         quantidadeProduto = findViewById(R.id.quantidade_produto);
@@ -51,18 +50,27 @@ public class BuscarProduto extends AppCompatActivity {
         titleNomeProduto = findViewById(R.id.title_nome_produto);
         titlePrecoProduto=findViewById(R.id.title_preco_produto);
         titleQuantidadeProduto = findViewById(R.id.title_quantidade_produto);
+        criarProduto = findViewById(R.id.create_product_button);
 
 
     }
     private void search(){
-        buscarProduto.setOnClickListener(v -> buscarCategory());
+        criarProduto.setOnClickListener(v -> buscarCategory());
 
     }
     private void buscarCategory(){
+        JSONObject postData = new JSONObject();
+        try{
+            postData.put("name_produto", nomeNovoProduto.getText());
+            postData.put("quantidade_produto",quantidadeNovoProduto.getText());
+            postData.put("price_produto",precoNovoProduto.getText());
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
         JsonObjectRequest request = new JsonObjectRequest(
-                Request.Method.GET,
-                U.BASE_URL + "/produto/" + codProduto.getText(),
-                null,
+                Request.Method.POST,
+                U.BASE_URL + "/produto",
+                postData,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -82,7 +90,7 @@ public class BuscarProduto extends AppCompatActivity {
                         } catch (JSONException e) {
                             System.out.println(response);
                             e.printStackTrace();
-                            titleNomeProduto.setText("Produto não encontrado");
+                            titleNomeProduto.setText("Produto não Criado");
                         }
                     }
                 },
@@ -108,3 +116,4 @@ public class BuscarProduto extends AppCompatActivity {
         titleQuantidadeProduto.setText(R.string.quantidadeprodutostitle);
     }
 }
+

@@ -1,4 +1,4 @@
-package com.example.frontend.produto.buscarProduto;
+package com.example.frontend.produto.excluirProduto;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -16,13 +16,12 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.frontend.R;
 import com.example.frontend.U;
-import com.example.frontend.categoria.Categoria;
 import com.example.frontend.produto.Produto;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class BuscarProduto extends AppCompatActivity {
+public class ExcluirProduto extends AppCompatActivity {
     private RequestQueue queue;
     private Button buscarProduto;
     private EditText codProduto;
@@ -108,3 +107,4 @@ public class BuscarProduto extends AppCompatActivity {
         titleQuantidadeProduto.setText(R.string.quantidadeprodutostitle);
     }
 }
+

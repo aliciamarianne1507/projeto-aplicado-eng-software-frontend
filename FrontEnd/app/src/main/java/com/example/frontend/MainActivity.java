@@ -9,6 +9,9 @@ import android.widget.Button;
 
 import com.example.frontend.categoria.excluirCategoria.ExcluirCategoria;
 import com.example.frontend.login.Login;
+import com.example.frontend.produto.buscarProduto.BuscarProduto;
+import com.example.frontend.produto.criarProduto.CriarProduto;
+import com.example.frontend.produto.editarProduto.EditarProduto;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Button accessButton = findViewById(R.id.access_button);
 
         accessButton.setOnClickListener(v -> {
-            Intent it = new Intent(MainActivity.this, Login.class);
+            Intent it = new Intent(MainActivity.this, EditarProduto.class);
             startActivity(it);
         });
     }

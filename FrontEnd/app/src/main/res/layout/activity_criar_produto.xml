@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/buscar_produto"
+        android:text="@string/criar_novo_produto"
         android:layout_margin= "50sp"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -17,7 +17,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/codigo_produto"
+        android:text="@string/novo_produto"
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_marginBottom="10sp"
@@ -26,18 +26,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10sp"
-        android:id="@+id/cod_produto"
+        android:id="@+id/novo_produto_nome"
+        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:id="@+id/novo_produto_quantidade"
+        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preco_novo_produto"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:id="@+id/novo_produto_preco"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center">
         <Button
-            android:id="@+id/search_product"
+            android:id="@+id/create_product_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/buscar_produto_button"
+            android:text="@string/criar_produto_button"
             />
     </LinearLayout>
     <LinearLayout
