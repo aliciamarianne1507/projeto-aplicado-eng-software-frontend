@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Comércio Eletrônico</string>
+    <string name="buscar_categoria">Buscar uma categoria:</string>
+    <string name="nome_categoria">Nome da Categoria:</string>
+    <string name="codigo_categoria">Código da Categoria</string>
+    <string name="digite_codigo_categoria">Digite o código da categoria</string>
+    <string name="buscar_categoria_button">Buscar Categoria</string>
+    <string name="criar_categoria">Criar nova categoria:</string>
+    <string name="nova_categoria">Digite o Nome da nova categoria:</string>
+    <string name="criar_categoria_button">Criar Categoria</string>
+    <string name="editar_categoria">Editar Categoria</string>
+    <string name="cod_categoria_editar">Código da categoria a ser editada:</string>
+    <string name="nome_categoria_novo">Novo nome para categoria:</string>
+    <string name="editar_categoria_button">Salvar alterações</string>
+    <string name="excluir_categoria">Excluir Categoria</string>
+    <string name="cod_categoria_excluir">Digite o código da categoria que deseja excluir:</string>
+    <string name="excluir_categoria_button">Excluir Categoria</string>
+    <string name="buscar_produto">Buscar um produto:</string>
+    <string name="codigo_produto">Digite o código do produto:</string>
+    <string name="buscar_produto_button">Buscar produto</string>
+</resources>
