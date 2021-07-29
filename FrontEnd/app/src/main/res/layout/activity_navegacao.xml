@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/logo">
+
+    <Button
+        android:id="@+id/categorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="@color/white"
+        android:text="Categorias"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+    <Button
+        android:id="@+id/produtos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text=" Produtos "
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+    <Button
+        android:id="@+id/pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="   Pedidos  "
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+    <Button
+        android:id="@+id/itempedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="Item Pedidos"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+    <Button
+        android:id="@+id/clientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="Clientes"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/logo">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite o seu email:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite o sua senha:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:id="@+id/fazer_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="Fazer Login"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+    <Button
+        android:id="@+id/criar_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="Criar Conta"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+    <Button
+        android:id="@+id/sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:text="Sair"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText,UsingOnClickInXml"
+        tools:targetApi="lollipop" />
+
+</LinearLayout>
