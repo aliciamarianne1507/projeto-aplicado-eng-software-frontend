@@ -1,4 +1,4 @@
-package com.example.frontend.itempedidos.buscarItemPedido;
+package com.example.frontend.pedidos.buscarPedido;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -16,64 +16,65 @@ import com.android.volley.toolbox.Volley;
 import com.example.frontend.R;
 import com.example.frontend.U;
 import com.example.frontend.categoria.Categoria;
-import com.example.frontend.itempedidos.ItemPedido;
+import com.example.frontend.pedidos.Pedido;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class BuscarItemPedido extends AppCompatActivity {
+public class BuscarPedido extends AppCompatActivity {
 
-    private TextView codigoPedido, titleCodigoPedido,titleCodigoProduto,codigoProduto,titleQuantidade,quantidadeProduto;
-    private EditText idItemPedido;
-    private Button buscarItemPedido;
+    private TextView codigoPedido, cpfPedido,quantidadePedido,titleCodigoPedido, titleCpfPedido,titleQuantidade;
+    private EditText idPedido;
+    private Button buscarPedido;
     private RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buscar_itempedido);
+        setContentView(R.layout.activity_buscar_pedido);
         components();
         search();
     }
 
     private void components(){
         codigoPedido = findViewById(R.id.codigo_pedido);
+        cpfPedido = findViewById(R.id.cpf_cliente);
+        quantidadePedido= findViewById(R.id.quantidade_pedido);
         titleCodigoPedido = findViewById(R.id.title_codigo_pedido);
-        titleCodigoProduto = findViewById(R.id.title_codigo_produto);
-        codigoProduto = findViewById(R.id.codigo_produto);
-        titleQuantidade = findViewById(R.id.title_quantidade_produto);
-        quantidadeProduto= findViewById(R.id.quantidade_pedido);
-        buscarItemPedido = findViewById(R.id.search_itempedido);
-        idItemPedido = findViewById(R.id.id_itempedido);
+        titleCpfPedido= findViewById(R.id.title_cpf_cliente);
+        titleQuantidade = findViewById(R.id.title_quantidade);
+        idPedido = findViewById(R.id.id_pedido);
+        buscarPedido = findViewById(R.id.search_pedido);
         queue = Volley.newRequestQueue(this);
     }
     private void search(){
-        buscarItemPedido.setOnClickListener(v -> buscarItem());
+        buscarPedido.setOnClickListener(v -> buscarPedido());
 
     }
-    private void buscarItem(){
+    private void buscarPedido(){
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,
-                U.BASE_URL + "/itempedido/" + idItemPedido.getText(),
+                U.BASE_URL + "/pedidos/" + idPedido.getText(),
                 null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
                             System.out.println(response);
-                            ItemPedido itempedido = new ItemPedido(
+                            Pedido pedido = new Pedido(
                                     response.getString("codigo_pedido"),
-                                    response.getString("codigo_produto"),
+                                    response.getString("cpf"),
                                     response.getString("created_at"),
                                     response.getString("updated_at"),
                                     response.getInt("quantidade")
+
                             );
-                            setComponents(itempedido);
+                            setComponents(pedido);
 
                         } catch (JSONException e) {
                             System.out.println(response);
                             e.printStackTrace();
-                            titleCodigoPedido.setText("Item Pedido não encontrado");
+                            titleCodigoPedido.setText("Pedido não encontrado");
                         }
                     }
                 },
@@ -86,14 +87,15 @@ public class BuscarItemPedido extends AppCompatActivity {
         queue.add(request);
     }
 
-    private void setComponents(ItemPedido itemPedido){
-        String quantidade = String.valueOf(itemPedido.getQuantidade());
-        codigoPedido.setText(itemPedido.getCodigo_pedido());
-        titleCodigoPedido.setText("Código do Pedido: ");
-        titleCodigoProduto.setText("Código do Produto");
-        codigoProduto.setText(itemPedido.getCodigo_produto());
+    private void setComponents(Pedido pedido){
+        String quantidade = String.valueOf(pedido.getQuantidade());
+        codigoPedido.setText(pedido.getCodigo_pedido());
+        cpfPedido.setText(pedido.getCpf());
+        quantidadePedido.setText(quantidade);
+        titleCodigoPedido.setText("Código do Pedido:");
+        titleCpfPedido.setText("CPF do Cliente:");
         titleQuantidade.setText("Quantidade:");
-        quantidadeProduto.setText(quantidade);
 
     }
 }
+
