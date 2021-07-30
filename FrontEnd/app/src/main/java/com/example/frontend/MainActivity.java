@@ -8,10 +8,13 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.frontend.cliente.buscarCliente.BuscarCliente;
+import com.example.frontend.cliente.criarCliente.CriarCliente;
 import com.example.frontend.cliente.excluirCliente.ExcluirCliente;
 import com.example.frontend.itempedidos.buscarItemPedido.BuscarItemPedido;
+import com.example.frontend.itempedidos.criarItemPedido.CriarItemPedido;
 import com.example.frontend.itempedidos.excluirItemPedido.ExcluirItemPedido;
 import com.example.frontend.pedidos.buscarPedido.BuscarPedido;
+import com.example.frontend.pedidos.criarPedido.CriarPedido;
 import com.example.frontend.pedidos.excluirPedido.ExcluirPedido;
 import com.example.frontend.produto.excluirProduto.ExcluirProduto;
 
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Button accessButton = findViewById(R.id.access_button);
 
         accessButton.setOnClickListener(v -> {
-            Intent it = new Intent(MainActivity.this, BuscarPedido.class);
+            Intent it = new Intent(MainActivity.this, CriarItemPedido.class);
             startActivity(it);
         });
     }
