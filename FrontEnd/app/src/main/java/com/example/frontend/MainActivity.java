@@ -13,6 +13,8 @@ import com.example.frontend.cliente.excluirCliente.ExcluirCliente;
 import com.example.frontend.itempedidos.buscarItemPedido.BuscarItemPedido;
 import com.example.frontend.itempedidos.criarItemPedido.CriarItemPedido;
 import com.example.frontend.itempedidos.excluirItemPedido.ExcluirItemPedido;
+import com.example.frontend.login.Login;
+import com.example.frontend.navegacao.Navegacao;
 import com.example.frontend.pedidos.buscarPedido.BuscarPedido;
 import com.example.frontend.pedidos.criarPedido.CriarPedido;
 import com.example.frontend.pedidos.excluirPedido.ExcluirPedido;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button accessButton = findViewById(R.id.access_button);
 
         accessButton.setOnClickListener(v -> {
-            Intent it = new Intent(MainActivity.this, CriarItemPedido.class);
+            Intent it = new Intent(MainActivity.this, Login.class);
             startActivity(it);
         });
     }

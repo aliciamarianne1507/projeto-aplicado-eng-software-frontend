@@ -17,6 +17,7 @@ import com.example.frontend.ErrorDialog;
 import com.example.frontend.MainActivity;
 import com.example.frontend.R;
 import com.example.frontend.U;
+import com.example.frontend.cliente.criarCliente.CriarCliente;
 import com.example.frontend.navegacao.Navegacao;
 
 import org.json.JSONException;
@@ -58,7 +59,7 @@ public class Login extends AppCompatActivity {
     }
     private void createAccount(){
         criarConta.setOnClickListener(v->{
-            Intent it = new Intent(Login.this, Navegacao.class);
+            Intent it = new Intent(Login.this, CriarCliente.class);
             startActivity(it);
         });
     }

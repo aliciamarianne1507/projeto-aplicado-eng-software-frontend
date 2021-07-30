@@ -7,7 +7,7 @@
     android:background="@drawable/logo">
 
     <Button
-        android:id="@+id/criar_itempedido"
+        android:id="@+id/post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -19,7 +19,7 @@
         tools:ignore="HardcodedText,UsingOnClickInXml"
         tools:targetApi="lollipop" />
     <Button
-        android:id="@+id/buscar_itempedido"
+        android:id="@+id/get"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -30,7 +30,7 @@
         tools:ignore="HardcodedText,UsingOnClickInXml"
         tools:targetApi="lollipop" />
     <Button
-        android:id="@+id/editar_itempedido"
+        android:id="@+id/put"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -41,7 +41,7 @@
         tools:ignore="HardcodedText,UsingOnClickInXml"
         tools:targetApi="lollipop" />
     <Button
-        android:id="@+id/excluir_itempedido"
+        android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
